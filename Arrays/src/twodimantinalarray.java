@@ -18,6 +18,25 @@ public class twodimantinalarray {
 		arr[1][3]=30;
 		
 		System.out.println(Arrays.deepToString(arr));
+		
+		//Two Dimensional Gagged Array
+		//Gagged Array
+		int arr2[][]=new int [2][];
+		
+		arr2[0]=new int[4];
+		arr2[1]=new int[2];
+//		1st
+		arr2[0][0]=5;
+		arr2[0][1]=10;
+		arr2[0][2]=15;
+		arr2[0][3]=20;
+		
+//		2nd
+		arr2[1][0]=25;
+		arr2[1][1]=30;
+		
+		System.out.println(Arrays.deepToString(arr2));
+		
 	}
 	
 
