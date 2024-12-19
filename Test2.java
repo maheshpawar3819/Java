@@ -1,55 +1,36 @@
-
-public class Test2 {
-	static class Cars{
-		void wheels() {
-			System.out.println("There are 4 Wheels in the class");
-		}
-		
-		void seets() {
-			System.out.println("The model is 4 sitter");
-		}
-		
-		void engine () {
-			System.out.println("1.5 lr Engine");
-		}
-	}
-	
-	static class Curv extends Cars{
-		void type() {
-			System.out.println("Petrol Vehicle");
-		}
-	}
-	
-	  static class Nexon extends Cars {
-     	 void type () {
-     		 System.out.println("Electric Vehicle");
-     	 }
-      }
-	
-    public static void main(String[] args) {
-    	
-         Curv c1=new Curv();
-         c1.wheels();
-         c1.engine();
-         c1.seets();
-         c1.type();
-         
-       
-         
-         Nexon n1=new Nexon();
-         n1.wheels();
-         n1.seets();
-         n1.type();
-    }
-    
-    
-   
+abstract class Laptop {
+	abstract void companyName();
 }
 
+class Gaming extends Laptop {
+	void companyName() {
+		System.out.println("Hp");
+	}
+}
 
+class Bussiness extends Laptop {
+	void companyName() {
+		System.out.println("Dell");
+	}
+}
 
+class Student extends Laptop {
+	void companyName() {
+		System.out.println("Lenovo");
+	}
+}
 
+public class Test2 {
 
+	public static void main(String[] args) {
+		Gaming g1=new Gaming();
+		g1.companyName();
 
+		Bussiness b1=new Bussiness();
+		b1.companyName();
+		
+		Student s1=new Student();
+		s1.companyName();
+	}
 
-
+}
