@@ -1,36 +1,28 @@
-abstract class Laptop {
-	abstract void companyName();
-}
-
-class Gaming extends Laptop {
-	void companyName() {
-		System.out.println("Hp");
+class Car {
+	private String name;
+	private int price;
+	private String company;
+	
+	//setter method
+	public void setData(String nm,int pr,String cm) {
+		name=nm;
+		price=pr;
+		company=cm;
+	}
+	
+	public String  getData() {
+		return "Name " + name +  "Price " + price +  "Company " + company; 
 	}
 }
 
-class Bussiness extends Laptop {
-	void companyName() {
-		System.out.println("Dell");
-	}
-}
-
-class Student extends Laptop {
-	void companyName() {
-		System.out.println("Lenovo");
-	}
-}
 
 public class Test2 {
 
 	public static void main(String[] args) {
-		Gaming g1=new Gaming();
-		g1.companyName();
+		Car c=new Car();
+		c.setData("Curv", 1200000, "Tata");
+		System.out.println(c.getData());
 
-		Bussiness b1=new Bussiness();
-		b1.companyName();
-		
-		Student s1=new Student();
-		s1.companyName();
 	}
 
 }
